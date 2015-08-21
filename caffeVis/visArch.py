@@ -8,50 +8,27 @@ from collections import OrderedDict
 # load image, switch to BGR, subtract mean, and make dims C x H x W for Caffe
 im = Image.open('JPEGImages/2007_000129.jpg')
 
-def predict(im,model='32s'):
-	# im = im.resize((500,500))
-	in_ = np.array(im, dtype=np.float32)
-	in_ = in_[:,:,::-1]
-	in_ -= np.array((104.00698793,116.66876762,122.67891434))
-	in_ = in_.transpose((2,0,1))
 
-	# load net
-	if model == '8s':
-		net = caffe.Net('deploy_8s.prototxt', 'fcn-8s-pascal.caffemodel', caffe.TEST)
-	else:
-		net = caffe.Net('deploy_32s.prototxt', 'fcn-32s-pascalcontext.caffemodel', caffe.TEST)
-	# shape for input (data blob is N x C x H x W), set data
-	net.blobs['data'].reshape(1, *in_.shape)
-	net.blobs['data'].data[...] = in_
-	# run net and take argmax for prediction
-	score = net.forward()
-	out = net.blobs['score'].data[0].argmax(axis=0)
-	return net,out
+def visArch():
 
+	def printArch(net, type="params"):
+		keyslist = [key for key in net.keys()]
+		tmp = OrderedDict()
+		for (i, name) in enumerate(keyslist):
+			# tmp[name] = net.blobs[name].data[0].shape
+			tmp[name] = net[name][0].data.shape
+			print name, tmp[name]
+		# return tmp
 
-
-def printArch(net):
-	keyslist = [key for key in net.iterkeys()]
-	tmp = OrderedDict()
-	for (i, name) in enumerate(keyslist):
-		# tmp[name] = net.blobs[name].data[0].shape
-		tmp[name] = net[name][0].data.shape
-		print name, tmp[name]
-
-	return tmp
-
-def compareArchs(net1, net2):
-	# n1 = ['vgg16_deploy.prototxt','vgg16fc.caffemodel']
-	# n2 = ['deploy_32s.prototxt','fcn-32s-pascalcontext.caffemodel']
-	# net1 = caffe.Net(n1[0],n1[1],caffe.TEST)
-	# net2 = caffe.Net(n2[0],n2[1],caffe.TEST)
-
-	mem = net1.params
-	keyslist1 = [key for key in net1.params.iterkeys()]
-	keyslist2 = [key for key in net2.params.iterkeys()]
-	# print '\t', n1[:-9],'\t',n2[:-9]
-	for n1,n2 in zip(keyslist1,keyslist2):
-		print n1,": ", net1.params[n1][0].data.shape, '\t|',n2, net2.params[n2][0].data.shape
+	def compareArchs(net1, net2, type='params'):
+		keyslist1 = [key for key in net1.keys()]
+		keyslist2 = [key for key in net2.keys()]
+		# print '\t', n1[:-9],'\t',n2[:-9]
+		for n1,n2 in zip(keyslist1,keyslist2):
+			if type=="params": # show params
+				print n1,": ", net1.params[n1][0].data.shape, '\t|',n2, net2.params[n2][0].data.shape
+			else: # show data
+				print n1,": ", net1.params[n1].data.shape, '\t|',n2, net2.params[n2].data.shape
 
 
 
