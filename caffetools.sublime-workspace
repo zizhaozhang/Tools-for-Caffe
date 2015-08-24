@@ -1,0 +1,743 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fcn",
+				"fcn-32s-pascalcontext.caffemodel"
+			],
+			[
+				"key",
+				"keyslist"
+			],
+			[
+				"conlle",
+				"collections〔module〕"
+			],
+			[
+				"vgg",
+				"vgg16.caffemodel"
+			],
+			[
+				"vgg_",
+				"vgg16_deploy.prototxt"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"keys",
+				"keyslist2"
+			],
+			[
+				"app",
+				"append	(eval.py)"
+			],
+			[
+				"fc",
+				"fcn-32s-pascalcontext.caffemodel"
+			],
+			[
+				"de",
+				"deploy_32s.prototxt"
+			],
+			[
+				"nips",
+				"nips_solver	(train_nips2012.sh)"
+			],
+			[
+				"tra",
+				"train_nips2012"
+			],
+			[
+				"traii",
+				"train_nips2012	(upload_to_server.sh)"
+			],
+			[
+				"prot",
+				"prototxt	(train_nips2012.sh)"
+			],
+			[
+				"edge",
+				"edgeimg"
+			],
+			[
+				"test",
+				"test_edge.bmp"
+			],
+			[
+				"1",
+				"137_TAD_255_ucm.bmp"
+			],
+			[
+				"da",
+				"data/"
+			],
+			[
+				"p",
+				"process"
+			],
+			[
+				"test_",
+				"test_ucm.bmp"
+			],
+			[
+				"h_",
+				"h_bottom"
+			],
+			[
+				"spark",
+				"sparktest"
+			],
+			[
+				"root",
+				"rootpath"
+			],
+			[
+				"ho",
+				"home"
+			],
+			[
+				"is",
+				"isdir〔function〕"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"re",
+				"rmtree〔function〕"
+			],
+			[
+				"U",
+				"UPLOAD_FOLDER"
+			],
+			[
+				"get",
+				"getcwd"
+			],
+			[
+				"n",
+				"nobr"
+			],
+			[
+				"dzi",
+				"dzipath"
+			],
+			[
+				"Dec",
+				"DecisionTreeClassifier"
+			],
+			[
+				"max",
+				"maxacc"
+			],
+			[
+				"ens",
+				"ensemble"
+			],
+			[
+				"supp",
+				"support"
+			],
+			[
+				"dta",
+				"datasets"
+			],
+			[
+				"dat",
+				"datasetname"
+			],
+			[
+				"datase",
+				"datasets"
+			],
+			[
+				"data",
+				"datasets"
+			],
+			[
+				"cre",
+				"createdz"
+			],
+			[
+				"outp",
+				"outputFileName"
+			],
+			[
+				"inl",
+				"include"
+			],
+			[
+				"ip",
+				"ipfile"
+			],
+			[
+				"node",
+				"nodetail"
+			],
+			[
+				"nu",
+				"number"
+			],
+			[
+				"rank",
+				"rank_siz"
+			],
+			[
+				"ma",
+				"maxdegree"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"tm",
+				"tmp"
+			],
+			[
+				"fib",
+				"fibonacci_heap"
+			],
+			[
+				"chec",
+				"check_meld"
+			],
+			[
+				"upda",
+				"updatedWeight"
+			],
+			[
+				"we",
+				"weight"
+			],
+			[
+				"min",
+				"min_pointer"
+			],
+			[
+				"OBje",
+				"OBJECT_FILES_2"
+			],
+			[
+				"can",
+				"can_open"
+			],
+			[
+				"cu",
+				"cur_path"
+			],
+			[
+				"epo",
+				"epochs"
+			],
+			[
+				"ac",
+				"activationfun"
+			],
+			[
+				"err",
+				"error_v"
+			],
+			[
+				"ep",
+				"epochs"
+			],
+			[
+				"theta",
+				"theta2_grad"
+			],
+			[
+				"cr",
+				"crossscore"
+			],
+			[
+				"crs",
+				"cross_validation"
+			],
+			[
+				"cl",
+				"clf_list"
+			],
+			[
+				"appl",
+				"applyNaiveBayes"
+			],
+			[
+				"L",
+				"LogisticRegression"
+			],
+			[
+				"ap",
+				"applyDecisionTree"
+			],
+			[
+				"ca",
+				"classlabel"
+			],
+			[
+				"class",
+				"classlabel"
+			],
+			[
+				"cla",
+				"classlabel"
+			],
+			[
+				"o",
+				"outputs"
+			],
+			[
+				"norm",
+				"normalize_data"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 327.0,
+		"last_filter": ":w",
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/zizhaozhang/caffe/github/Tools-for-Caffe"
+	],
+	"file_history":
+	[
+		"/home/zizhaozhang/caffe/github/caffe/FCN/vgg16_deploy.prototxt",
+		"/home/zizhaozhang/caffe/github/Tools-for-Caffe/caffeVis/predict.py",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/eval.py",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/solver.prototxt",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/train_val.prototxt",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/train_val_original.prototxt",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/vgg_to_fcn.py",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/VGG_16_fcn.prototxt",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/deploy_32s.prototxt",
+		"/home/zizhaozhang/caffe/github/Tools-for-Caffe/caffeArch/eval.py",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/solve.py",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/convert_to_caffe_input/caffelmdb.py",
+		"/home/zizhaozhang/caffe/github/caffe/examples/net_surgery/net_surgery.py",
+		"/home/zizhaozhang/caffe/github/caffe/src/caffe/net.cpp",
+		"/home/zizhaozhang/caffe/github/caffe/src/caffe/blob.cpp",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/vgg16.caffemodel",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/convert_vgg_to_fcn.py",
+		"/home/zizhaozhang/caffe/github/caffe/FCN/net_surgery.py",
+		"/home/zizhaozhang/caffe/python_image2lmdb/img2lmdb_caffe.py",
+		"/home/zizhaozhang/caffe/caffe_updating/caffe/src/caffe/proto/caffe.proto",
+		"/home/zizhaozhang/caffe/caffe_updating/caffe/include/caffe/proto/caffe.pb.h",
+		"/home/zizhaozhang/caffe/caffe_updating!/caffe/src/caffe/layers/weighted_softmax_loss_layer.cpp",
+		"/home/zizhaozhang/caffe/caffe_updating!/caffe/src/caffe/layers/slice_layer.cpp",
+		"/home/zizhaozhang/caffe/caffe_updating!/caffe/include/caffe/layer_factory.hpp",
+		"/home/zizhaozhang/caffe/caffe_updating!/caffe/include/caffe/loss_layers.hpp",
+		"/home/zizhaozhang/caffe/caffe_updating!/caffe/.build_debug/src/caffe/proto/caffe.pb.h",
+		"/home/zizhaozhang/caffe/caffe_updating!/caffe/src/caffe/test/test_data_transformer.cpp",
+		"/home/zizhaozhang/caffe/caffe-master/include/caffe/proto/caffe.pb.h",
+		"/home/zizhaozhang/caffe/caffe-master/include/caffe/blob.hpp",
+		"/home/zizhaozhang/caffe/caffe-master/python/caffe/pycaffe.py",
+		"/home/zizhaozhang/caffe/caffe-master/muscle/muscle_v1.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/upload_to_server.sh",
+		"/home/zizhaozhang/caffe/caffe-master/python/caffe/_caffe.cpp",
+		"/home/zizhaozhang/caffe/deepdream/demo.py",
+		"/home/zizhaozhang/caffe/caffe-master/src/caffe/blob.cpp",
+		"/home/zizhaozhang/caffe/caffe-master/.build_debug/src/caffe/proto/caffe.pb.h",
+		"/home/zizhaozhang/caffe/caffe-master/matlab/matcaffe/matcaffe_init.m",
+		"/home/zizhaozhang/caffe/caffe-master/muscle/upload_files_to_server.sh",
+		"/home/zizhaozhang/caffe/caffe-master/muscle_65/muscle_solver.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/muscle_95/muscle_deploy.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/muscle/muscle_solver.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/muscle/resume_train.sh",
+		"/home/zizhaozhang/caffe/caffe-master/muscle/create_data_lmdb_muscle.sh",
+		"/home/zizhaozhang/caffe/caffe-master/muscle _v2/create_data_lmdb_muscle.sh",
+		"/home/zizhaozhang/caffe/caffe-master/learn/lenet.py",
+		"/home/zizhaozhang/caffe/caffe-master/python/caffe/net_spec.py",
+		"/home/zizhaozhang/caffe/caffe-master/muscle_65/create_data_lmdb_muscle.sh",
+		"/home/zizhaozhang/caffe/caffe-master/demo_nips2012/nips2012ck.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/muscle/muscle_deploy.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/muscle_95/muscle_v1.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/Makefile",
+		"/home/zizhaozhang/caffe/caffe-master/muscle_65/muscle_v1.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/muscle/muscle_65/muscle_v1.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/test.py",
+		"/home/zizhaozhang/caffe/caffe-master/zz_runfirst.sh",
+		"/home/zizhaozhang/caffe/caffe-master/muscle/make_mean.sh",
+		"/home/zizhaozhang/caffe/caffe-master/muscle/train_muscle.sh",
+		"/home/zizhaozhang/caffe/caffe-master/demo_nips2012/nips_solver.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/examples/mnist/lenet_solver.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/examples/mnist/lenet_train_test.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/demo_nips2012/train_nips2012.sh",
+		"/home/zizhaozhang/caffe/caffe-master/demo_nips2012/make_nips_mean.sh",
+		"/home/zizhaozhang/caffe/caffe-master/demo_nips2012/upload_files_to_server.sh",
+		"/home/zizhaozhang/caffe/caffe-master/models/bvlc_reference_caffenet/train_val.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/demo_nips2012/create_data_lmdb_nips12.sh",
+		"/home/zizhaozhang/caffe/caffe-master/examples/mnist/train_lenet.sh",
+		"/home/zizhaozhang/caffe/caffe-master/demo_nips2012/lenet_train_test.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/demo_nips2012/nips2012.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/zz_runfirst.sh~",
+		"/home/zizhaozhang/caffe/caffe-master/demo_nips2012/resume_training.sh",
+		"/home/zizhaozhang/code/matlab/DeepContour-master/model_deep_contour/deploy_cov4.prototxt",
+		"/home/zizhaozhang/caffe/caffe-master/demo_nips2012/prepare_image.m",
+		"/home/zizhaozhang/.config/sublime-text-3/Packages/User/sh.sublime-build",
+		"/home/zizhaozhang/zizhaozhang/hpc/main/fastSeg_test.py",
+		"/home/zizhaozhang/zizhaozhang/hpc/submit.sh",
+		"/home/zizhaozhang/caffe/nips2012/forcaffe/train.txt",
+		"/home/zizhaozhang/zizhaozhang/hpc/parpool.m",
+		"/home/zizhaozhang/zizhaozhang/hpc/main/test.py",
+		"/home/zizhaozhang/Desktop/upload.sh",
+		"/home/zizhaozhang/caffee/caffe-master/examples/imagenet/train_caffenet.sh",
+		"/home/zizhaozhang/caffee/caffe-master/examples/imagenet/make_imagenet_mean.sh",
+		"/home/zizhaozhang/caffee/caffe-master/examples/imagenet/create_imagenet.sh",
+		"/home/zizhaozhang/caffee/caffe-master/data/mnist/get_mnist.sh",
+		"/home/zizhaozhang/zizhaozhang/hpc/test_original/test_time_original.py",
+		"/home/zizhaozhang/zizhaozhang/hpc/run.py",
+		"/home/zizhaozhang/zizhaozhang/hpc/test.py",
+		"/home/zizhaozhang/zizhaozhang/hpc/upload.sh",
+		"/home/zizhaozhang/zizhaozhang/hpc/start slaves",
+		"/home/zizhaozhang/bme_class_project/go.m",
+		"/home/zizhaozhang/zizhaozhang/hpc/fastSeg_class.py",
+		"/home/zizhaozhang/Desktop/spark/conf/spark-env.sh",
+		"/home/zizhaozhang/zizhaozhang/hpc/fastSeg2.py",
+		"/home/zizhaozhang/zizhaozhang/hpc/sbm.sh",
+		"/home/zizhaozhang/zizhaozhang/hpc/callmatlab.py",
+		"/home/zizhaozhang/zizhaozhang/hpc/fastSeg.py",
+		"/home/zizhaozhang/zizhaozhang/hpc/main/data.dat",
+		"/home/zizhaozhang/zizhaozhang/hpc/data/data.dat",
+		"/home/zizhaozhang/zizhaozhang/hpc/sparktest.m",
+		"/home/zizhaozhang/zizhaozhang/hpc/labuser@10.244.13.90",
+		"/home/zizhaozhang/zizhaozhang/hpc/script.sh~",
+		"/home/zizhaozhang/ProgramFiles/spark/hpc/sbm.sh",
+		"/home/zizhaozhang/zizhaozhang/hpc/script.sh",
+		"/home/zizhaozhang/ProgramFiles/spark/hpc/script.sh",
+		"/home/zizhaozhang/ProgramFiles/spark/hpc/go.m",
+		"/home/zizhaozhang/web/static/style.css",
+		"/home/zizhaozhang/Dropbox/web/templates/entry.html",
+		"/home/zizhaozhang/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/usr/local/MATLAB/R2014b/extern/engines/python/setup.py",
+		"/home/zizhaozhang/Dropbox/web/static/style.css",
+		"/home/zizhaozhang/Dropbox/web/hello2.py",
+		"/home/zizhaozhang/Dropbox/web/testmatlab.py",
+		"/home/zizhaozhang/Dropbox/web/hello.py",
+		"/home/zizhaozhang/Dropbox/web/templates/entry2.html",
+		"/home/zizhaozhang/Dropbox/web/README.md",
+		"/home/zizhaozhang/Dropbox/bme_hw3/ml_project.py",
+		"/home/zizhaozhang/Dropbox/bme_hw3/learning.py",
+		"/home/zizhaozhang/Dropbox/bme_hw3/test.py",
+		"/home/zizhaozhang/Dropbox/bme_hw3/test3.py",
+		"/home/zizhaozhang/Dropbox/bme_hw3/decisionbounary.py",
+		"/home/zizhaozhang/Dropbox/bme_hw3/scatter_demo.py",
+		"/home/zizhaozhang/Dropbox/bme_hw3/seedata.py",
+		"/home/zizhaozhang/Dropbox/bme_hw3/contour3d_demo2.py",
+		"/home/zizhaozhang/Dropbox/bme_hw3/read_data.py",
+		"/home/zizhaozhang/Dropbox/bme_hw3/learning2.py",
+		"/home/zizhaozhang/Dropbox/web/slidedeck.py",
+		"/home/zizhaozhang/Dropbox/ADS_project/src/Dijkstra_Fibonacci.cpp",
+		"/home/zizhaozhang/Dropbox/web/templates/index.html",
+		"/home/zizhaozhang/Desktop/flaskproject_GUI/hello.py"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"fc6-conv",
+			"fc7-conv",
+			"fc7",
+			"fc6",
+			"fc7",
+			"fc6",
+			"equals",
+			"INNER_Product",
+			"SoftmaxWithLossLayer",
+			"diff",
+			"count_",
+			"shape_",
+			"data_",
+			"data",
+			"bp",
+			"x",
+			"muscle",
+			"bias_f",
+			"weight_filter",
+			"gauss",
+			"weight_filler",
+			"layer {\n  name: \"data\"\n  type: \"Data\"\n  top: \"data\"\n  top: \"label\"\n  include {\n    phase: TEST\n  }\n  transform_param {\n    scale: 0.00390625\n  }\n  data_param {\n    source: \"demo_nips2012/nips2012_val_lmdb\"\n    batch_size: 64\n    backend: LMDB\n  }\n}",
+			"stride: 2",
+			"\"\n",
+			" \n",
+			"GLOG_logtostderr=0 ",
+			"stride: 0",
+			"stride: 2",
+			"ReadProtoFromTextFile",
+			"package",
+			"C",
+			"0300",
+			"T",
+			"cout",
+			"		\n",
+			"	\n",
+			">\n",
+			"tile",
+			"URL",
+			"stringstream",
+			"cout",
+			"_removenode",
+			"fib",
+			"trace_node",
+			"assert",
+			"_removenode",
+			"_update_min_pointer",
+			"_clearChildCut",
+			"_adjustparent",
+			"insert",
+			"_merge",
+			"_merge_child",
+			"_merge_chi",
+			"_merge",
+			"_merge_chi",
+			"_merge",
+			"_merge_child",
+			"_merge",
+			"_adjustparent",
+			"_merge",
+			"_merge_root",
+			"_merge",
+			"_removenode",
+			"_merge",
+			"insert",
+			"trace_node_array",
+			"trance_node_array",
+			"_removenode",
+			"_update",
+			"countingnode",
+			"_adjustparent",
+			"rank_array",
+			"trace_node",
+			"_adjustparent",
+			"_update_min",
+			"_merge",
+			"_update_min_pointer",
+			"node",
+			"_meld",
+			"_merge",
+			"UNIT_M",
+			"rank_array",
+			"_meld",
+			"testmeld",
+			"passtest",
+			"dotest",
+			"testdegree",
+			"delete",
+			"check_meld",
+			"tile",
+			"DeepZoomGenerator",
+			"get_dzi",
+			"Lock",
+			"OrderedDict",
+			"make_response",
+			"get_dzi",
+			"DEEPZOOM_FORMAT",
+			"associate",
+			"sigmid",
+			"dsigmod",
+			"sigmod",
+			"activation",
+			"sigmoid_prime",
+			"sigmoid",
+			"division",
+			"range(9, 0, -1)",
+			"crossvalid2",
+			"crossvalid",
+			"results"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"fc6",
+			"fc7",
+			"fc7-conv",
+			"fc6-conv",
+			"fc7-conv",
+			"fc6-conv",
+			"WeightedSoftmaxWithLossLayerTest",
+			"weight_filler",
+			"weight_filter",
+			"stride: 1",
+			"stride: 0",
+			"dactivation",
+			"activation",
+			"range(1,11)",
+			"getPredictionResult2",
+			"getPredictionResult",
+			"results[datasetname]"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/sh.sublime-build",
+	"project": "caffetools.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Makefile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 249.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

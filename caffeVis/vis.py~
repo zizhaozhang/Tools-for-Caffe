@@ -8,27 +8,24 @@ from collections import OrderedDict
 # load image, switch to BGR, subtract mean, and make dims C x H x W for Caffe
 
 
+def printArch(net, type="params"):
+	keyslist = [key for key in net.keys()]
+	tmp = OrderedDict()
+	for (i, name) in enumerate(keyslist):
+		# tmp[name] = net.blobs[name].data[0].shape
+		tmp[name] = net[name][0].data.shape
+		print name, tmp[name]
+	# return tmp
 
-def visArch():
-
-	def printArch(net, type="params"):
-		keyslist = [key for key in net.keys()]
-		tmp = OrderedDict()
-		for (i, name) in enumerate(keyslist):
-			# tmp[name] = net.blobs[name].data[0].shape
-			tmp[name] = net[name][0].data.shape
-			print name, tmp[name]
-		# return tmp
-
-	def compareArchs(net1, net2, type='params'):
-		keyslist1 = [key for key in net1.keys()]
-		keyslist2 = [key for key in net2.keys()]
-		# print '\t', n1[:-9],'\t',n2[:-9]
-		for n1,n2 in zip(keyslist1,keyslist2):
-			if type=="params": # show params
-				print n1,": ", net1.params[n1][0].data.shape, '\t|',n2, net2.params[n2][0].data.shape
-			else: # show data
-				print n1,": ", net1.params[n1].data.shape, '\t|',n2, net2.params[n2].data.shape
+def compareArchs(net1, net2, type='params'):
+	keyslist1 = [key for key in net1.keys()]
+	keyslist2 = [key for key in net2.keys()]
+	# print '\t', n1[:-9],'\t',n2[:-9]
+	for n1,n2 in zip(keyslist1,keyslist2):
+		if type=="params": # show params
+			print n1,": ", net1.params[n1][0].data.shape, '\t|',n2, net2.params[n2][0].data.shape
+		else: # show data
+			print n1,": ", net1.params[n1].data.shape, '\t|',n2, net2.params[n2].data.shape
 
 
 
