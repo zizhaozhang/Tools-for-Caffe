@@ -49,21 +49,26 @@ class img2lmdb:
 		dbfile = lmdb.open(name,map_size=int(1e12))
 			
 		meanrgb = np.zeros(3) # for mean RGB
-		mag = 1.0 * len(files)
+		mag = 1. * len(files)
 				
 		imgnames = [os.path.split(name)[1] for name in files]
+		print imgnames
+		
 		with dbfile.begin(write=True) as txn:
 			for (i, img) in enumerate(imgnames):
 				I = misc.imread(os.path.join(imgpath,img[:-4]+sufix))
+				#misc.imshow(I)
 				if len(I.shape) == 3: 
-					meanrgb += np.sum(np.sum(img,0),0) / mag
+					#meanrgb += np.sum(np.sum(img,0),0) / mag
 					I = I[:,:,::-1] # change to BGR
 					I = scipy.transpose(I,(2,0,1)) # change to CxHxW
 				else:# white and black, normally it is 
 					I = I.reshape((I.shape[0],I.shape[1],1))
 					I = I.transpose((2,0,1))
-				I = np.astype(typ)
-				print i, ':', img, type(I), I.shape
+				if I.dtype != typ:
+					print "convert to ", typ
+					I = I.astype(typ)
+				print i, ':', img,'|', I.dtype,'|',  I.shape,'|',  'min: ', I.min(),'|',  'max: ', I.max()
 				form = '{:0>10d}'.format(i)
 				try:
 					datum = caffe.io.array_to_datum(I)
