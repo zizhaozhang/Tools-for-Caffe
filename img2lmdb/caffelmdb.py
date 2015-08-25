@@ -47,8 +47,8 @@ class img2lmdb:
 	def write(self, files, imgpath, typ, name='fcn-train-lmdb', sufix='.jpg'):
 		name = os.path.join(self.savepath,name)
 		dbfile = lmdb.open(name,map_size=int(1e12))
-		
-		meanrgb = np.zeros(3)
+			
+		meanrgb = np.zeros(3) # for mean RGB
 		mag = 1.0 * len(files)
 				
 		imgnames = [os.path.split(name)[1] for name in files]
@@ -73,7 +73,7 @@ class img2lmdb:
 				
 		dbfile.close()
 		meanrgb = meanrgb*mag/len(files)
-		print "mean value R, G, B", meanrgb
+		print "mean value R, G, B: ", meanrgb
 
 
 	def checkgt(files, imgpath, name='fcn-train-lmdb', sufix='.jpg'):
