@@ -12,8 +12,10 @@ def printArch(net, type="params"):
 	keyslist = [key for key in net.keys()]
 	tmp = OrderedDict()
 	for (i, name) in enumerate(keyslist):
-		# tmp[name] = net.blobs[name].data[0].shape
-		tmp[name] = net[name][0].data.shape
+		if type=="blobs":
+			tmp[name] = net[name].data[0].shape
+		elif type=="params":
+			tmp[name] = net[name][0].data.shape
 		print name, tmp[name]
 	# return tmp
 
@@ -23,11 +25,29 @@ def compareArchs(net1, net2, type='params'):
 	# print '\t', n1[:-9],'\t',n2[:-9]
 	for n1,n2 in zip(keyslist1,keyslist2):
 		if type=="params": # show params
-			print n1,": ", net1.params[n1][0].data.shape, '\t|',n2, net2.params[n2][0].data.shape
+			print n1,": ", net1[n1][0].data.shape, '\t|',n2, net2[n2][0].data.shape
 		else: # show data
-			print n1,": ", net1.params[n1].data.shape, '\t|',n2, net2.params[n2].data.shape
+			print n1,": ", net1[n1].data.shape, '\t|',n2, net2[n2].data.shape
 
+def predict(im, net, meanval):
 
+	#assert(type(meanval)==types.TupleType)
+	# im = im.resize((500,500))
+	in_ = np.array(im, dtype=np.float32)
+	in_ = in_[:,:,::-1]
+	in_ -= meanval
+	in_ = in_.transpose((2,0,1))
+
+	keyslist = net.blobs.keys()
+	datatype = keyslist[0]
+	outtype = keyslist[-1]
+	# shape for input (data blob is N x C x H x W), set data
+	net.blobs[datatype].reshape(1, *in_.shape)
+	net.blobs[datatype].data[...] = in_
+	# run net and take argmax for prediction
+	score = net.forward()
+	out = net.blobs[outtype].data[0].argmax(axis=0)
+	return out, net
 
 # for example, given a 500*500 image in 32s model
 # data (3, 500, 500)

@@ -11,15 +11,16 @@ sys.path.append('/home/zizhaozhang/caffe/github/caffe/python')
 import caffe
 from random import shuffle
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 class img2lmdb:
 
 	def __init__(self,savepath):
 		self.savepath = savepath
 
-	def read(self, name='fcn-train-lmdb', n=0):
+	def read(self, typ, name='fcn-train-lmdb', n=0):
 		# read nth image in dbfile
+		#print name, typ
 		name = os.path.join(self.savepath,name)
 		env = lmdb.open(name,readonly=True)
 		f =  env.begin()
@@ -30,46 +31,71 @@ class img2lmdb:
 
 		datum = caffe.proto.caffe_pb2.Datum()
 		datum.ParseFromString(raw_d)
-
-		x = scipy.fromstring(datum.data,dtype=scipy.uint8)
+		
+		#x = scipy.fromstring(datum.data,dtype=typ) # deprecated when dtype is float need to change to datum.float_data
+		x = caffe.io.datum_to_array(datum)
+		#print datum.channels, datum.height, datum.width, x.nbytes
 		x = x.reshape(datum.channels, datum.height, datum.width)
 		y = datum.label
-		print 'label:' 
-		print "shape: ", x.shape
+		#print 'label:', y
+		#print "shape: ", x.shape
 		if x.shape[0] == 3:
 			x = x.transpose((1,2,0))
 			x = x[:,:,::-1] # convert to RGB
 		else:
 			x = x[0]
+			print type(x)
+			#print "seg label: ", x.min() , ','. x.max()
 		return x
-		
+
+	def checklmdb(self, name1, typ1, name2, typ2, num, path):
+		for i in range(num):
+
+			print 'wirte out #{} image'.format(i)
+			img = self.read(typ1,name1,i)
+			gt = self.read(typ2,name2,i)
+			gt = gt.astype(img.dtype)
+			
+			#gt = gt.reshape((gt.shape[0],gt.shape[1],1)).repeat(3,axis=2)
+			#gt = np.reshape(gt,(gt.shape[0],gt.shape[1],1))
+			#img = np.reshape(img[:,:,0],(gt.shape[0],gt.shape[1]))
+			print "seg label: ", gt.max(),gt.min()
+			#com = np.concatenate((img,gt),axis=1)
+			#misc.imsave(os.path.join(path, str(i)+'.png'),com)
+			plt.figure(1)
+			plt.subplot(121)
+			plt.imshow(img)
+			plt.subplot(122)
+			plt.imshow(gt,cmap='Accent')
+			plt.savefig(os.path.join(path, str(i)+'.png'))
 
 	def write(self, files, imgpath, typ, name='fcn-train-lmdb', sufix='.jpg'):
 		name = os.path.join(self.savepath,name)
 		dbfile = lmdb.open(name,map_size=int(1e12))
 			
 		meanrgb = np.zeros(3) # for mean RGB
-		mag = 1. * len(files)
+		numpixel = 0.0
+		mag = 1. * len(files)*10000
 				
 		imgnames = [os.path.split(name)[1] for name in files]
-		print imgnames
 		
 		with dbfile.begin(write=True) as txn:
 			for (i, img) in enumerate(imgnames):
 				I = misc.imread(os.path.join(imgpath,img[:-4]+sufix))
 				#misc.imshow(I)
-				if len(I.shape) == 3: 
-					#meanrgb += np.sum(np.sum(img,0),0) / mag
-					I = I[:,:,::-1] # change to BGR
+				if len(I.shape) == 3:
+					meanrgb += (np.sum(np.sum(I,0),0) / mag)
+					numpixel += I.shape[0]*I.shape[1]
+					I = I[:,:,::-1] # convert to BGR
 					I = scipy.transpose(I,(2,0,1)) # change to CxHxW
-				else:# white and black, normally it is 
+				else:# white and black, normally it is groundtruth
 					I = I.reshape((I.shape[0],I.shape[1],1))
 					I = I.transpose((2,0,1))
 				if I.dtype != typ:
-					print "convert to ", typ
+					#print "convert to ", typ
 					I = I.astype(typ)
 				print i, ':', img,'|', I.dtype,'|',  I.shape,'|',  'min: ', I.min(),'|',  'max: ', I.max()
-				form = '{:0>10d}'.format(i)
+				form = '{:0>10d}'.format(i) # pay attention the # of images has less than 1e10
 				try:
 					datum = caffe.io.array_to_datum(I)
 					txn.put(form, datum.SerializeToString())
@@ -77,8 +103,11 @@ class img2lmdb:
 					print "write " + name + "error"
 				
 		dbfile.close()
-		meanrgb = meanrgb*mag/len(files)
-		print "mean value R, G, B: ", meanrgb
+		
+		if numpixel != 0.0:
+			meanrgb = meanrgb*mag/numpixel
+		return meanrgb
+		#print "mean value R, G, B: ", meanrgb
 
 
 	def checkgt(files, imgpath, name='fcn-train-lmdb', sufix='.jpg'):
