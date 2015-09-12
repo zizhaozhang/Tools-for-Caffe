@@ -51,6 +51,7 @@ def predict(im, net, meanval):
 
 
 def montage(im):
+	print "to do"
 	
 # for example, given a 500*500 image in 32s model
 # data (3, 500, 500)
