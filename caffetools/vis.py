@@ -8,7 +8,8 @@ from collections import OrderedDict
 # load image, switch to BGR, subtract mean, and make dims C x H x W for Caffe
 
 
-def printArch(net, type="params"):
+def printParams(net):
+	net = net.params
 	keyslist = [key for key in net.keys()]
 	tmp = OrderedDict()
 	for (i, name) in enumerate(keyslist):
@@ -16,6 +17,15 @@ def printArch(net, type="params"):
 			tmp[name] = net[name].data[0].shape
 		elif type=="params":
 			tmp[name] = net[name][0].data.shape
+		print name, tmp[name]
+	# return tmp
+
+def printBlobs(net):
+	net = net.blobs
+	keyslist = [key for key in net.keys()]
+	tmp = OrderedDict()
+	for (i, name) in enumerate(keyslist):
+		tmp[name] = net[name].data[0].shape
 		print name, tmp[name]
 	# return tmp
 
