@@ -13,10 +13,7 @@ def printParams(net):
 	keyslist = [key for key in net.keys()]
 	tmp = OrderedDict()
 	for (i, name) in enumerate(keyslist):
-		if type=="blobs":
-			tmp[name] = net[name].data[0].shape
-		elif type=="params":
-			tmp[name] = net[name][0].data.shape
+		tmp[name] = net[name][0].data.shape
 		print name, tmp[name]
 	# return tmp
 
@@ -60,8 +57,19 @@ def predict(im, net, meanval):
 	return out, net
 
 
-def montage(im):
-	print "to do"
+def montage(data, tile_num = 100):
+
+	batch, channels, height, width = data.shape
+
+	imw = int(np.floor(np.sqrt(tile_num)))
+	img = np.zeros((height*imw,width*imw))
+	num = 0
+	for i in range(imw):
+		for j in range(imw):
+			tmp = data[0,num,:,:]
+			img[i*height:(i+1)*height, j*width:(j+1)*width] = tmp
+
+	return img
 	
 # for example, given a 500*500 image in 32s model
 # data (3, 500, 500)
