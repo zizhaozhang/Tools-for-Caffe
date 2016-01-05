@@ -12,7 +12,7 @@ from skimage.color import label2rgb
 from skimage import io
 
 
-def show(image, bw):
+def show(image, bw, alpha=0.3, ifshow=True):
 	
 	# apply threshold
 	# thresh = threshold_otsu(image)
@@ -25,11 +25,13 @@ def show(image, bw):
 	label_image = label(cleared)
 	borders = np.logical_xor(bw, cleared)
 	label_image[borders] = -1
-	image_label_overlay = label2rgb(label_image, image=image)
+	label_image[cleared == 0] = -1
+	image_label_overlay = label2rgb(label_image, image=image, alpha=alpha)
 
 	#fig, ax = plt.subplots(ncols=1, nrows=1, figsize=(6, 6))
-	io.imshow(image_label_overlay)
-	io.show()
+	if ifshow:
+		io.imshow(image_label_overlay)
+		io.show()
 	return image_label_overlay
 	#for region in regionprops(label_image):
 

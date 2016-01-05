@@ -22,8 +22,11 @@ def printBlobs(net):
 	keyslist = [key for key in net.keys()]
 	tmp = OrderedDict()
 	for (i, name) in enumerate(keyslist):
-		tmp[name] = net[name].data[0].shape
-		print name, tmp[name]
+		if len(net[name].data.shape) == 0:
+			print name, net[name].data
+		else:
+			# tmp[name] = net[name].data[0].shape
+			print name, net[name].data[0].shape
 	# return tmp
 
 def compareArchs(net1, net2, type='params'):
