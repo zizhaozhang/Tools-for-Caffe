@@ -6,7 +6,10 @@ import os
 
 def compute_mean(img_path, sufix):
 	namelist = glob.glob(img_path+'*'+sufix)
-
+	if len(namelist) == 0:
+		print "no image found."
+		return 
+		
 	# mean_value = np.zeros()
 	for (idx, item) in enumerate(namelist):
 		im = misc.imread(item)
