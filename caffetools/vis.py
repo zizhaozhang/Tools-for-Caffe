@@ -60,18 +60,21 @@ def predict(im, net, meanval):
 	return out, net
 
 
-def montage(data, tile_num = 100):
+def montage(data, start_dim=0, tile_num = 100):
 
 	batch, channels, height, width = data.shape
+	if start_dim + 3 > channels:
+		print 'start_dim exceeds the range'
 
 	imw = int(np.floor(np.sqrt(tile_num)))
-	img = np.zeros((height*imw,width*imw))
+	img = np.zeros((3, height*imw,width*imw))
 	num = 0
 	for i in range(imw):
 		for j in range(imw):
-			tmp = data[0,num,:,:]
-			img[i*height:(i+1)*height, j*width:(j+1)*width] = tmp
-
+			tmp = data[num,start_dim:start_dim+3,:,:]
+			img[:, i*height:(i+1)*height, j*width:(j+1)*width] = tmp[0]
+			num += 1
+	img = img.reshape((1,2,0))
 	return img
 	
 # for example, given a 500*500 image in 32s model
