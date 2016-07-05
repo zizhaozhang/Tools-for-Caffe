@@ -74,7 +74,7 @@ def montage(data, start_dim=0, tile_num = 100):
 			tmp = data[num,start_dim:start_dim+3,:,:]
 			img[:, i*height:(i+1)*height, j*width:(j+1)*width] = tmp[0]
 			num += 1
-	img = img.reshape((1,2,0))
+	img = img.transpose((1,2,0))
 	return img
 	
 # for example, given a 500*500 image in 32s model
