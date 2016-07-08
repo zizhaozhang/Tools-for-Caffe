@@ -4,7 +4,7 @@ import scipy.misc as misc
 import glob
 import os
 
-def compute_mean(img_path, sufix):
+def compute_mean(img_path, sufix, display=False):
 	namelist = glob.glob(img_path+'*'+sufix)
 	if len(namelist) == 0:
 		print "no image found."
@@ -13,7 +13,8 @@ def compute_mean(img_path, sufix):
 	# mean_value = np.zeros()
 	for (idx, item) in enumerate(namelist):
 		im = misc.imread(item)
-		print '#', idx, ' size: ', im.shape, 'per-image mean: ', np.mean(np.mean(im,axis=0), axis=0)
+		if display:
+			print '#', idx, ' size: ', im.shape, 'per-image mean: ', np.mean(np.mean(im,axis=0), axis=0)
 		if idx == 0:
 			mean_value = np.zeros(im.shape)
 
