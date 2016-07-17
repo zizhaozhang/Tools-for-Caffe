@@ -14,7 +14,7 @@ def compute_mean(img_path, sufix, display=False):
 	for (idx, item) in enumerate(namelist):
 		im = misc.imread(item)
 		if display:
-			print '#', idx, ' size: ', im.shape, 'per-image mean: ', np.mean(np.mean(im,axis=0), axis=0)
+				print '#', idx, ' size: ', im.shape, 'per-image mean: ', np.mean(np.mean(im,axis=0), axis=0)
 		if idx == 0:
 			mean_value = np.zeros(im.shape)
 

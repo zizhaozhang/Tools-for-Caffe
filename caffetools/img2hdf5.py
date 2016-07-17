@@ -98,6 +98,7 @@ class img2hdf5:
 				#     f.create_dataset('label', data=yt.astype(np.float32), **comp_kwargs)
 				# with open(os.path.join(savapath, 'test.txt'), 'w') as f:
 				#     f.write(test_filename + '\n')
+
 	def writeHDF5_singlelabel(self, savepath, imsufix):
 
 		imlist = glob.glob(os.path.join(self.datapath, '*'+imsufix))

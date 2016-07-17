@@ -61,22 +61,29 @@ def predict(im, net, meanval):
 
 
 def montage(data, start_dim=0, dim_num=1, tile_num = 100):
+    channels, height, width = data.shape
+    if start_dim + dim_num > channels:
+        print 'start_dim exceeds the range'
+#         break
+    if height*tile_num > 5000:
+        tile_num = np.floor(5000/height)
+        print 'reduce tile_num to ', tile_num, ' for memory consideration'
 
-	channels, height, width = data.shape
-	if start_dim + dim_num > channels:
-		print 'start_dim exceeds the range'
+    imw = int(np.floor(np.sqrt(tile_num)))
+    img = np.zeros((dim_num, height*imw, width*imw))
 
-	imw = int(np.floor(np.sqrt(tile_num)))
-	img = np.zeros((dim_num, height*imw, width*imw))
-
-	for i in range(imw):
-		for j in range(imw):
-			tmp = data[start_dim:start_dim+dim_num,:,:]
-			img[:, i*height:(i+1)*height, j*width:(j+1)*width] = tmp
-			start_dim += 1
-			if start_dim >= channels: continue
-
-	img = img.transpose((1,2,0))
-	img = np.squeeze(img)
-	return img
+    for i in range(imw):
+        for j in range(imw):
+            tmp = data[start_dim:start_dim+dim_num,:,:]
+            if (tmp.max()-tmp.min()) > 0:
+                tmp = (tmp-tmp.min()) / (tmp.max()-tmp.min())
+            img[:, i*height:(i+1)*height, j*width:(j+1)*width] = tmp
+            start_dim += 1
+            if start_dim >= channels: 
+                img = img.transpose((1,2,0))
+                img = np.squeeze(img)
+                return img
+    img = img.transpose((1,2,0))
+    img = np.squeeze(img)
+    return img
 	
